@@ -1,0 +1,4 @@
+# below are the file names and the folder names which we are no going to upload in hte github when we are uploading hte entire project folder into the github 
+.env  
+/node_modules  # no need to consider about the path name of the node_modules folder just write it's name enough  
+

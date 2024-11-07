@@ -1,0 +1,19 @@
+note  : import axios from "axios"; // Runs in the browser, making HTTP requests to the server
+
+
+
+
+
+--> understanding steps of todo list mern application  : 
+
+
+/home/rgukt/Desktop/WT/nodejs/to_do_list_mern/src/App.js---> 
+this above App.js file is to update the react State varble/object only 
+
+below files are used to update the data in the database as per the react State object  
+/home/rgukt/Desktop/WT/nodejs/to_do_list_mern/src/Tasks.js ---> 
+/home/rgukt/Desktop/WT/nodejs/to_do_list_mern/src/services/taskServices.js   --------> 
+--->  note  : import axios from "axios"; // Runs in the browser, making HTTP requests to the server
+/home/rgukt/Desktop/WT/nodejs/to_do_list_mern/src/server/routes/tasks.js  
+
+note : even when we istall the mongoose also the node_modules folder & the package.json and package-lock.json file are created 
