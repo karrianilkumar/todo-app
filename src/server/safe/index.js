@@ -23,13 +23,6 @@ This is a route-level middleware that forwards any requests made to /api/tasks t
 The tasks router would typically handle all routes 
 related to task management, such as getting, adding, updating, or deleting tasks.
 */
-
-
-// Root route to check server deployment
-app.get('/', (req, res) => {
-  res.send('Backend is running successfully!');
-});
-
 app.use("/api/tasks", tasks);
 
 const port = process.env.PORT || 8080; //  process.env.PORT  is genera port number of the server to be run in expressjs   

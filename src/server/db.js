@@ -1,27 +1,24 @@
-
-require('dotenv').config()   // to use .env file content in this file 
-const mongoose = require('mongoose'); // // to provide the scehema / structure / plan for the data stored in the mogodb and allows to perform crud operations on databse 
+require('dotenv').config();   // to use .env file content in this file 
+const mongoose = require('mongoose'); // provides the schema/structure/plan for the data stored in MongoDB and allows CRUD operations on the database
 
 const connectDB = async () => {
+  console.log('Starting MongoDB connection...');  // Log to indicate the start of the connection process
   try {
-  
-  //  await mongoose.connect('mongodb://localhost:27017/todo-app', { // // connected to the todo-app collection in mongodb 
-   
-await mongoose.connect(process.env.MONGO_URL, { //process.env.MONGO_URL open .env there db connection url link  
+    // Attempt to connect to MongoDB using the URL from the .env file
+    await mongoose.connect(process.env.MONGO_URL, {  // process.env.MONGO_URL reads the connection URL from .env file
       useNewUrlParser: true,
       useUnifiedTopology: true,
       // Remove useCreateIndex
     });
-    console.log('MongoDB connected');
-
+    console.log('MongoDB connected successfully');  // Log if the connection is successful
 
   } catch (err) {
-    console.error('Could not connect to database.', err);
-    process.exit(1);
+    console.error('Could not connect to database:', err.message); // Log the specific error message
+    console.error('Stack trace:', err.stack);  // Log the stack trace for more details
+    process.exit(1);  // Exit the process with failure if connection fails
   }
 };
-// // module.exports --> exporting this component to other files 
+
+// module.exports --> exporting this component to other files 
 module.exports = connectDB;
-
-
 
